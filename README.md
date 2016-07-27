@@ -5,3 +5,5 @@ This repository contains Essentia scripts that categorize and preprocess open da
 These scripts provide examples of how Essentia can be used to easily organize and process data from public data sets, and include data from [AWS Public Data Sets](https://aws.amazon.com/public-data-sets/) as well as other sources like [data.gov](https://www.data.gov/).
 
 All of the data in these examples are stored in Amazon S3 buckets. More information about each can be found in the scripts, which are organized by category. You can also read more about these examples on the [AuriQ blog](http://www.auriq.com/blog/category/blog-archive/).
+
+[R](./R) contains R scripts which analyze select samples of open data in RStudio. These scripts use the RESS package, which contains R functions that load Essentia output data into R. [Learn more about Essentia's R Integration package](http://auriq.com/documentation/source/integrations/R/index.html).
