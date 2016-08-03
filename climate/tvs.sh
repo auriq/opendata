@@ -1,7 +1,7 @@
 #!/bin/bash
 # organizes tvs (tornadic vortex signature overlay) data
 # extracts time, longitude, latitude, shear data
-# NOAA Sevee Weather data source: National Centers for Environmental Information (NCEI) - Asheville NC"
+# NOAA Severe Weather data source: National Centers for Environmental Information (NCEI) - Asheville NC"
 
 ess cluster set local
 ess select s3://asi-opendata --aws_access_key AKIAJJ2NEBGDF7I7FVZA --aws_secret_access_key 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
