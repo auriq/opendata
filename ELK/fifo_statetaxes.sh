@@ -3,7 +3,6 @@
 # using fifo to ship essentia category,
 
 ##create a category
-# ess select s3://asi-opendata --aws_access_key "AKIAJJ2NEBGDF7I7FVZA" --aws_secret_access_key "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"
 ess select asi-opendata
 ess category add state_taxes "USCensus/US_Census_Bureau_State_Tax_Collections/STC_2014_STC006.US01.zip" --noprobe --dateregex='[:%Y:]' --overwrite
 
