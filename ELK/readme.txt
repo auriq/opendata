@@ -1,0 +1,9 @@
+This directory contains scripts that create Essentia categories from the asi-opendata S3 bucket and stream category contents into an Elasticsearch index. Instructions and scripts for setting up the ELK stack can be found here: https://bitbucket.org/auriq/logstash.git. 
+
+Tips on working with Elasticsearch/Logstash/Kibana:
+0. Install Elasticsearch, Logstash, and Kibana. Start things up by running "elasticsearch -d" and "kibana", then navigate to "localhost:5601/app/kibana".
+1. Use an example script (ie fifo_border.sh) and modify it to create the desired category. Make sure to replace the "ess stream" or "ess query" statement with a command appropriate for the data you want to index, and in "output", change the index name to something simple and relevant (your category name is usually a good bet).
+2. In the Settings tab in Kibana, configure an index pattern that will capture the index you just created. In the Discover tab, you can get a quick overview of your data, as well as select fields you want to visualize. When viewing fields, click the gear icon next to "Available fields", then in the drop-down menu, uncheck "Hide Missing Fields" to show the raw (unanalyzed) fields. When dealing with string fields, always use the raw version.
+3. In Visualize, you can select the index/fields you want to work with, and after creating your chart/map, save your visualization. Then, in Dashboard, you can create a collection of saved visualizations.
+4. Number fields: these must be explicitly converted to floats or integers. See scripts for examples (under "filter").
+5. Geo_points: these require converting latitude and longitude fields to floats, then renaming them to "[location][lat]" and "[location][lon]", then converting "location" to a float. Then, an index template must be used to explicitly cast "location" as a "geo_point". See fifo_tvs.sh and tvs_temp.json for an example.
