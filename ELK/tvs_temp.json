@@ -1,0 +1,10 @@
+{
+  "template" : "tvs*",
+  "mappings": {
+    "_default_": {
+        "properties": {
+          "location" : {"type": "geo_point"}
+        }
+      }
+  }
+}
